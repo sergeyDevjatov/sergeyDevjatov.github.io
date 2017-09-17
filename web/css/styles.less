@@ -1,0 +1,75 @@
+@import "consts.less";
+@import "classes.less";
+body {
+    color: @default_text;
+}
+
+img {
+    display: block;
+    width: 300px;
+}
+
+.header {
+    .user_select(none);
+    .fill-by-width;
+    display: block;
+    background: @default_text;
+    height: 70px;
+    @logo_width: 20%;
+    .logo {
+        .left_float(@logo_width);
+        a {
+            display: block;
+            height: 100%;
+            .middle_align_hack;
+            * {
+                vertical-align: middle;
+                display: inline-block;
+            }
+            .emblem {
+                width: auto;
+                padding: 0 5px 0 15px;
+                height: 50px;
+            }
+            .title {
+                padding: 0 0px;
+                width: auto;
+                text-align: center;
+                font: 36px "Brioni Sans";
+                color: @default_text-inverse;
+            }
+        }
+    }
+    .menu {
+        .right_float(100% - @logo_width);
+        overflow: hidden;
+        .menuitem {
+            font: 20px "Uni Sans";
+            font-weight: bold;
+            float: left;
+            display: block;
+            height: 100%;
+            padding: 0 15px;
+            text-decoration: none;
+            color: @default_text-inverse;
+            &:hover {
+                color: @default_text-lighter;
+            }
+            &:focus {
+                color: @embleme-gold;
+            }
+            &.current {
+                background: @embleme-blue;
+            }
+            .middle_align_hack;
+            * {
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+        ul {
+            height: 100%;
+            display: inline-block;
+        }
+    }
+}

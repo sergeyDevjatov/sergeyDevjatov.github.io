@@ -1,0 +1,35 @@
+.user_select(@arg: auto) {
+    -webkit-user-select: @arg;
+    -moz-user-select: @arg;
+    -ms-user-select: @arg;
+    user-select: @arg;
+}
+
+.fill-by-width {
+    width: 100%;
+}
+
+.float(@side, @width) {
+    float: @side;
+    width: @width;
+    height: 100%;
+}
+
+.left_float(@width) {
+    .float(left, @width);
+}
+
+.right_float(@width) {
+    .float(right, @width);
+}
+
+.middle_align_hack {
+    &::before {
+        content: ".";
+        visibility: hidden;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+    }
+}
