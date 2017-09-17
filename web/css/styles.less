@@ -16,6 +16,9 @@ img {
     background: @default_text;
     height: 70px;
     @logo_width: 20%;
+    a {
+        text-decoration: none;
+    }
     .logo {
         .left_float(@logo_width);
         a {
@@ -50,7 +53,6 @@ img {
             display: block;
             height: 100%;
             padding: 0 15px;
-            text-decoration: none;
             color: @default_text-inverse;
             &:hover {
                 color: @default_text-lighter;
