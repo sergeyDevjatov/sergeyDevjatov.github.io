@@ -6,11 +6,15 @@
 @image5: url("../media/img/donetsk_5.jpg");
 .main {
     .text_container {
-        padding: 30px;
+        padding: 2% 10%;
         box-sizing: border-box;
         font-family: "Liberation Serif";
         line-height: 20px;
         font-size: 16px;
+        text-indent: 2%;
+        p{
+            margin: 1% 0;
+        }
         h1 {
             font-size: 24px;
             margin: 10px 0;
@@ -18,23 +22,42 @@
         }
     }
     .image_container {
-        padding: 1%;
-        background-color: hsl(34, 53%, 82%);
-        // background-image: url('https://img0.etsystatic.com/162/0/5596561/il_340x270.1155042682_dhrw.jpg');
-        width: 20%;
-        border: 1px solid rgba(50, 50, 50, 0.5);
-        border-radius: 2px;
-        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        position: relative;
+        width: 25%;
+        background: @dark_background;
+        margin: 1% 0;
+        &[float='left']{
+            float: left;
+            margin-right: 1%;
+        }
+        &[float='right']{
+            float: right;
+            margin-left: 1%;
+        }
         .image_description {
+            cursor: default;
+            font-family: 'Liberation Sans';
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
             text-align: center;
-            padding-top: 2%;
+            position: absolute;
+            bottom: 35%;
+            display: none;
+            width: 100%;
+            color:white;
+        }
+        &:hover{
+            img {
+                opacity: 0.3;
+            }
+            .image_description{
+                display: block;
+            }
         }
         img {
             width: 100%;
             height: auto;
-            border: 1px solid rgba(0, 0, 0, 0.5);
             border-radius: 2px;
-            box-sizing: border-box;
+            display: block;
         }
     }
     .history {}
