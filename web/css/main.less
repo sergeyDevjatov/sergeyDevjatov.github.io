@@ -1,0 +1,100 @@
+@import "base.less";
+@image1: url("../media/img/donetsk_1.jpg");
+@image2: url("../media/img/donetsk_2.jpg");
+@image3: url("../media/img/donetsk_3.jpg");
+@image4: url("../media/img/donetsk_4.jpg");
+@image5: url("../media/img/donetsk_5.jpg");
+.main {
+    .text_container {
+        padding: 30px;
+        box-sizing: border-box;
+        font-family: "Liberation Serif";
+        line-height: 20px;
+        font-size: 16px;
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    }
+    .image_container {
+        padding: 1%;
+        background-color: hsl(34, 53%, 82%);
+        // background-image: url('https://img0.etsystatic.com/162/0/5596561/il_340x270.1155042682_dhrw.jpg');
+        width: 20%;
+        border: 1px solid rgba(50, 50, 50, 0.5);
+        border-radius: 2px;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        .image_description {
+            text-align: center;
+            padding-top: 2%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+    }
+    .history {}
+    .base_info {
+        .float_left(40%);
+    }
+    .images {
+        padding: 30px 7%;
+        box-sizing: border-box;
+        .float_right(60%);
+        height: 500px;
+        .image_holder {
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            background: @image2 center;
+            background-size: cover;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: @image1 center;
+                background-size: cover;
+                display: block;
+                @keyframes front_anim {
+                    .opacity_change(25,
+                    @image2);
+                    .opacity_change(50,
+                    @image3);
+                    .opacity_change(75,
+                    @image4);
+                    .opacity_change(100,
+                    @image5);
+                }
+                animation-name: front_anim;
+                animation-duration: 20s;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+            & {
+                @keyframes back_anim {
+                    25% {
+                        background-image: @image3;
+                    }
+                    50% {
+                        background-image: @image4;
+                    }
+                    75% {
+                        background-image: @image5;
+                    }
+                    100% {
+                        background-image: @image1;
+                    }
+                }
+                animation-name: back_anim;
+                animation-duration: 20s;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .last_news {}
+}
