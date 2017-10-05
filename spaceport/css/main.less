@@ -28,12 +28,6 @@ body {
     background-position: center;
     background-size: cover;
     .container {
-        @media (max-width: 1160px) {
-            margin-left: 80px;
-        }
-        @media (max-width: 1000px) {
-            margin-left: 0;
-        }
         position: relative;
         overflow: hidden;
         .video_background {
@@ -69,10 +63,11 @@ body {
             color: white;
             font-family: Diaria Pro;
             width: 630px;
-            @media (max-width: 1000px) {
-                & {
-                    margin-left: 80px;
-                }
+            @media (min-width: 1160px) {
+                margin-left: 0;
+            }
+            @media (max-width: 1160px) {
+                margin-left: 80px;
             }
             margin-top: 210px;
             * {
