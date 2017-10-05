@@ -1,0 +1,129 @@
+@import "classes.less";
+body {
+    font-family: Proxima Nova;
+    line-height: 1.2;
+}
+
+.container {
+    width: 1000px;
+    height: inherit;
+    margin: auto;
+}
+
+.media_background(@opacity) {
+    position: absolute;
+    top: 0;
+    background: black;
+    *:nth-child(1) {
+        opacity: 0.7;
+    }
+}
+
+#greeting {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: url("../assets/newSpaceStationCrewLaunchesWebm720P@3x.png");
+    background-position: center;
+    background-size: cover;
+    .container {
+        @media (max-width: 1160px) {
+            margin-left: 80px;
+        }
+        @media (max-width: 1000px) {
+            margin-left: 0;
+        }
+        position: relative;
+        overflow: hidden;
+        .video_background {
+            .media_background(0.7);
+            video {
+                width: auto;
+                height: 700px;
+            }
+        }
+        .image_background {
+            .media_background(0.7);
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-width: 1000px) {
+            & {
+                overflow: hidden;
+            }
+            & .video_background {
+                display: block;
+            }
+        }
+        @media (min-width: 1000px) {
+            & .video_background {
+                display: none;
+            }
+        }
+        .content {
+            display: block;
+            position: absolute;
+            color: white;
+            font-family: Diaria Pro;
+            width: 630px;
+            @media (max-width: 1000px) {
+                & {
+                    margin-left: 80px;
+                }
+            }
+            margin-top: 210px;
+            * {
+                margin-top: 14px;
+            }
+            h1 {
+                font-size: 48px;
+                font-weight: 900;
+            }
+            p {
+                font-size: 30px;
+                font-weight: 400;
+            }
+            .content_3 {
+                margin-top: 28px;
+            }
+        }
+    }
+}
+
+#questions {
+    width: 100%;
+    height: 350px;
+    .container {
+        .question {
+            width: 270px;
+            display: inline-grid;
+            text-align: left;
+            // @media (max-width: 1000px) {
+            //     &:nth-child(1) {
+            //         margin-left: 80px;
+            //     }
+            // }
+            margin: 26px 10px 0 10px; 
+            .title {
+                font-weight: 700;
+                font-size: 30px;
+                color: #222;
+                line-height: 1.7;
+            }
+            .text {
+                font-weight: 100;
+                font-size: 16px;
+                color: #777;
+            }
+            .illustration {
+                width: 175px;
+                height: 175px;
+                border-radius: 100%;
+                margin: 20px auto 0 auto;
+            }
+        }
+    }
+}

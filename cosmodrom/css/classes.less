@@ -1,0 +1,40 @@
+.user_select(@arg: auto) {
+    -webkit-user-select: @arg;
+    -moz-user-select: @arg;
+    -ms-user-select: @arg;
+    user-select: @arg;
+}
+
+.fill-by-width {
+    width: 100%;
+}
+
+.float(@side, @width) {
+    float: @side;
+    width: @width;
+    height: 100%;
+}
+
+.float_left(@width) {
+    .float(left, @width);
+}
+
+.float_right(@width) {
+    .float(right, @width);
+}
+
+.middle_align_hack(@to_align) {
+    &::before {
+        content: ".";
+        visibility: hidden;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+    }
+    @selector: e('@{to_align}');
+    @{selector}{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

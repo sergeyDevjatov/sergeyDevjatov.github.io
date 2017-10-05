@@ -1,18 +1,58 @@
 @import "base.less";
-@image1: url("../media/img/donetsk_1.jpg");
-@image2: url("../media/img/donetsk_2.jpg");
-@image3: url("../media/img/donetsk_3.jpg");
-@image4: url("../media/img/donetsk_4.jpg");
-@image5: url("../media/img/donetsk_5.jpg");
+
 .main {
+    padding: 2% 10%;
+    min-height: 500px;
+    .main_block-title {
+        text-align: center;
+        font-family: 'Liberation Sans';
+        font-size: 20px;
+        padding: 25px 0 10px 0;
+    }
+    .spoiler_button{
+        color: @embleme-blue;
+        cursor: pointer;
+        border-bottom: 1px dashed;
+    }
+    .spoiler_button:hover{
+        color: @embleme-gold;
+        border-bottom: 1px dashed;
+    }
+    .spoiler_content{
+        display: none;
+        width: inherit;
+    }
+    .city_map {
+        width: 100%;
+        height: auto;
+        .map_frame {
+            width: inherit;
+            height: 500px;
+        }
+    }
+    .admin_division {
+        position: relative;
+        @map_width: 800px;
+        @map_height: 500px;
+        img{
+            width: @map_width;
+            height: @map_height;
+        }
+        canvas{
+            position: absolute;
+            width: @map_width;
+            height: @map_height;
+        }
+    }
+    .public_transport{
+    }
     .text_container {
-        padding: 2% 10%;
         box-sizing: border-box;
         font-family: "Liberation Serif";
         line-height: 20px;
         font-size: 16px;
         text-indent: 2%;
-        p{
+        p {
             margin: 1% 0;
         }
         h1 {
@@ -26,11 +66,11 @@
         width: 25%;
         background: @dark_background;
         margin: 1% 0;
-        &[float='left']{
+        &[float='left'] {
             float: left;
             margin-right: 1%;
         }
-        &[float='right']{
+        &[float='right'] {
             float: right;
             margin-left: 1%;
         }
@@ -43,13 +83,13 @@
             bottom: 35%;
             display: none;
             width: 100%;
-            color:white;
+            color: white;
         }
-        &:hover{
+        &:hover {
             img {
                 opacity: 0.3;
             }
-            .image_description{
+            .image_description {
                 display: block;
             }
         }
@@ -69,55 +109,25 @@
         box-sizing: border-box;
         .float_right(60%);
         height: 500px;
-        .image_holder {
-            height: 100%;
-            overflow: hidden;
-            background-color: black;
-            background: @image2 center;
-            background-size: cover;
-            &::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: @image1 center;
-                background-size: cover;
-                display: block;
-                @keyframes front_anim {
-                    .opacity_change(25,
-                    @image2);
-                    .opacity_change(50,
-                    @image3);
-                    .opacity_change(75,
-                    @image4);
-                    .opacity_change(100,
-                    @image5);
-                }
-                animation-name: front_anim;
-                animation-duration: 20s;
-                animation-delay: 1s;
-                animation-iteration-count: infinite;
-            }
-            & {
-                @keyframes back_anim {
-                    25% {
-                        background-image: @image3;
-                    }
-                    50% {
-                        background-image: @image4;
-                    }
-                    75% {
-                        background-image: @image5;
-                    }
-                    100% {
-                        background-image: @image1;
-                    }
-                }
-                animation-name: back_anim;
-                animation-duration: 20s;
-                animation-delay: 1s;
-                animation-iteration-count: infinite;
-            }
-        }
     }
     .last_news {}
+    .feedback_form{
+        *{display: block; }
+        .feedback_form-text_input{
+            border-radius: 3px;
+            border: 1px solid @embleme-blue;
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .feedback_form-text_input:invalid{
+            /* border: 1px solid #db2b2b; */
+            /* border: 1px solid transparent; */
+            /* box-shadow: 0 0 2px 1px #db2b2b; */
+            border: 1px solid @embleme-blue;
+            box-shadow: none;
+        }
+        .feedback_form-text_input:focus {
+            border: 1px solid @embleme-gold;
+        }
+    }
 }
