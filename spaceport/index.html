@@ -9,6 +9,10 @@
     <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
     <script src="import/less.min.js" type="text/javascript"></script>
+    <script src="import/hyphen/hyphen.js" type="text/javascript"></script>
+    <script src="import/hyphen/patterns/ru.js" type="text/javascript"></script>
+    <script src="import/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/base.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -16,7 +20,7 @@
         <div class="container">
             <div class="video_background">
                 <video autoplay muted loop src="media/mp4/New_Space_Station_Crew_Launches.webm.720p.mp4">
-                        <img src='newSpaceStationCrewLaunchesWebm720P@3x.png'/>
+                        <img src='assets/backgroundGreeting.png'/>
                     </video>
             </div>
             <div class="content">
@@ -28,34 +32,117 @@
     </div>
     <div id="questions">
         <div class="container">
-            <center>
-                <div class="question">
-                    <h1 class="title">Кто же мы?</h1>
-                    <p class="text">
-                        <!--Мы — молодая, но уверенно развивающаяся компания, работающая в сфере пассаржиских и грузовых космических перелётов.-->
-                        Мы — мо&shy;ло&shy;дая, но у&shy;ве&shy;ренно раз&shy;ви&shy;ва&shy;ю&shy;ща&shy;яся ком&shy;па&shy;ния, ра&shy;бо&shy;та&shy;ю&shy;щая в сфере пас&shy;сар&shy;жис&shy;ких и гру&shy;зо&shy;вых кос&shy;ми&shy;чес&shy;ких пе&shy;ре&shy;лё&shy;тов.
-                    </p>
-                    <img class="illustration" src="media/img/tut_mogla_bit_vasha_kartinka.jpg">
-                </div>
-                <div class="question">
-                    <h1 class="title">Что предлагаем?</h1>
-                    <p class="text">
-                        <!--Максимально комфортные условия для пассажиров по доступным ценам. Заботу о вашем багаже и грузе. Мгновенный перелёт.-->
-                        Мак&shy;си&shy;мально ком&shy;форт&shy;ные ус&shy;ло&shy;вия для пас&shy;са&shy;жи&shy;ров по дос&shy;туп&shy;ным це&shy;нам. За&shy;боту о ва&shy;шем ба&shy;гаже и грузе. Мгно&shy;вен&shy;ный пе&shy;ре&shy;лёт.
-                    </p>
-                    <img class="illustration" src="media/img/tut_mogla_bit_vasha_kartinka.jpg">
+            <div class="question">
+                <h1 class="title">Кто же мы?</h1>
+                <p class="text">
+                    Мы — молодая, но уверенно развивающаяся компания, работающая в сфере пассаржиских 
+                    и грузовых космических перелётов.
+                </p>
+                <img class="illustration" src="assets/aboutImage.jpg"
+                     srcset="img/aboutImage@2x.png 2x, img/aboutImage@3x.png 3x">
+            </div>
+            <div class="question">
+                <h1 class="title">Что предлагаем?</h1>
+                <p class="text">
+                    Максимально комфортные условия для пассажиров по доступным ценам. 
+                    Заботу о вашем багаже и грузе. Мгновенный перелёт.
+                </p>
+                <img class="illustration" src="assets/serviceImage.jpg"
+                     srcset="img/serviceImage@2x.png 2x, img/serviceImage@3x.png 3x">
+            </div>
+            <div class="question">
+                <h1 class="title">А какие гарантии?</h1>
+                <p class="text">
+                    Не смотря на малый возраст, наша компания уже успела зарекомендовать себя у большого числа 
+                    землян и ведущих межпланетных магазинов.
+                </p>
+                <img class="illustration" src="assets/warrantyImage.jpg"
+                     srcset="img/warrantyImage@2x.png 2x, img/warrantyImage@3x.png 3x">
+            </div>
+        </div>
+    </div>
+    <div id="why_we">
+        <div class="container">
+            <div class="heading">
+                <h1>Больше конкретики. Почему именно мы?</h1>
+            </div>
+            <div class="advantage">
+                <h1 class="title">Новейшие корабли</h1>
+                <p class="text side">
+                    Мы предлагаем нашим клиентам современные комфортабельные
+                    и надёжные корабли немецкого производства: 
+                    Kreiz F5, Krugei-X, а также сверхбыстрый Contr-L V.<br>
+                    Эти космолёты удостаиваются самых положительных отзывов изо всех уголков вселенной. 
+                    Всё это будет доступно и вам.
+                </p>
+            </div>
+            <div class="advantage">
+                <h1 class="title">Высший пилотаж</h1>
+                <p class="text side">
+                    Нашими кораблями управляют только квалифицированные пилоты.
+                    Каждый пилот обладает сертификатом San-Francisco Space Academy,
+                    перед полётом пилоты проходят обязательный осмотр.<br>
+                    Будьте уверены, с нашими пилотами вы доберётесь до места назначения без происшествий.
+                </p>
+            </div>
+            <br>
+            <div class="advantage">
+                <h1 class="title">Превосходный персонал</h1>
+                <p class="text middle" >
+                    Во время посадки в космолёт, погрузки багажа, перелёта и по прибытии
+                    вы обязательно столкнётесь с нашим обслуживающим персоналом.
+                    Мы позаботились о том, чтобы ваш контакт с ним был как можно более приятным.
+                    Все наши сотрудники имеют опыт работы в сфере обслуживания,
+                    проходят ежегодную переквалификацию и вообще очень приятные и ответственные люди.<br>
 
+                    Многочисленные клиенты отмечают, что с нашими стюардами перелёт немногим отличается
+                    от приятной домашней посиделки в компании друзей.
+                </p>
+            </div>
+            <img id="rocket1" src="assets/rocket1.png">
+        </div>
+    </div>
+    <div id="services">
+        <div class="image_background">
+            <img src='assets/backgroundService@2x.jpg'/>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="heading">
+                    <h1>Какие услуги мы предоставляем?</h1>
                 </div>
-                <div class="question">
-                    <h1 class="title">А какие гарантии?</h1>
+                <div class="service floatleft" style="background: url('assets/backgroundPassenger.jpg')">
+                    <h1 class="title">Пассажирский перелёт</h1>
                     <p class="text">
-                        <!--Не смотря на малый возраст, наша компания уже успела зарекомендовать себя у большого числа землян и ведущих межпланетных магазинов.-->
-                        Не смотря на ма&shy;лый воз&shy;раст, наша ком&shy;па&shy;ния уже ус&shy;пела за&shy;ре&shy;ко&shy;мен&shy;до&shy;вать себя у боль&shy;шого числа зем&shy;лян и ве&shy;ду&shy;щих межп&shy;ла&shy;нет&shy;ных ма&shy;га&shy;зи&shy;нов.
+                        Перелёт в комфортабельном пассажирском космолёте на расстояние
+                        до пяти световых лет. Пассажирам всех классов гарантируется хороший сервис, 
+                        трёхразовое питание, мультимедийная система и многое другое.
                     </p>
-                    <img class="illustration" src="media/img/tut_mogla_bit_vasha_kartinka.jpg">
-
+                    <p class="price">от 1569 $</p>
+                    <div class="order_button" href="javascript:void();">Заказать</div>
                 </div>
-            </center>
+                <div class="service floatright" style="background: url('assets/backgroundFreight.jpg')">
+                    <h1 class="title">Перевоз груза</h1>
+                    <p class="text">
+                        Транспортировка грузов любой массы в любую точку вселенной, 
+                        передача посылок, пересылка покупок из магазинов. Упаковка груза 
+                        производится нашими сотрудниками. Вы передаете груз нам, 
+                        об остальном позаботимся мы сами.
+                    </p>
+                    <p class="price">от 69 $ за кг</p>
+                    <div class="order_button" href="javascript:void();">Заказать</div>
+                </div>
+                <div class="service floatleft" style="background: url('assets/backgroundComplex.jpg')">
+                    <h1 class="title">Комплексные перелёты</h1>
+                    <p class="text">
+                        Семейные переезды, транспортировка технологического оборудования, 
+                        перевоз особо крупногабаритных грузов или грузов особой важности, 
+                        перевоз VIP-персон. Разрешим любой транспортный вопрос.
+                    </p>
+                    <p class="price">цена договорная</p>
+                    <div class="order_button" href="javascript:void();">Заказать</div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
