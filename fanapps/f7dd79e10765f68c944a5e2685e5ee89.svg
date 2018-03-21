@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="670px" viewBox="0 0 375 670" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>2C75CB78-C208-483A-B723-968A251D0259</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="375" height="669.980469"></rect>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#E78DBA" offset="0%"></stop>
+            <stop stop-color="#7F055F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Background">
+            <g>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#E06C9F" xlink:href="#path-1"></use>
+                <g id="Bg" mask="url(#mask-2)">
+                    <g transform="translate(-843.000000, -653.000000)">
+                        <rect id="Bg" fill="url(#linearGradient-3)" x="843" y="656" width="375" height="667"></rect>
+                        <rect id="Rectangle" fill-opacity="0.100000001" fill="#6051CA" style="mix-blend-mode: color-burn;" transform="translate(841.974747, 494.974747) rotate(45.000000) translate(-841.974747, -494.974747) " x="441.974747" y="194.974747" width="800" height="600" rx="300"></rect>
+                        <rect id="Rectangle" fill-opacity="0.100000001" fill="#6051CA" style="mix-blend-mode: color-burn;" transform="translate(1267.922754, 1359.922754) rotate(45.000000) translate(-1267.922754, -1359.922754) " x="520.348012" y="986.135383" width="1495.14948" height="747.574742" rx="373.787371"></rect>
+                        <rect id="Rectangle" fill-opacity="0.05" fill="#6051CA" style="mix-blend-mode: color-burn;" transform="translate(1667.040043, 1032.040043) rotate(45.000000) translate(-1667.040043, -1032.040043) " x="860.90056" y="628.970301" width="1612.27897" height="806.139483" rx="403.069742"></rect>
+                        <rect id="Rectangle" fill-opacity="0.200000018" fill="#6051CA" style="mix-blend-mode: multiply;" transform="translate(704.132034, 1616.132034) rotate(-45.000000) translate(-704.132034, -1616.132034) " x="40.2699859" y="1284.20101" width="1327.7241" height="663.862048" rx="331.931024"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
