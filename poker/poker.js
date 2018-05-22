@@ -1840,7 +1840,7 @@ var poker;
             });
             Object.defineProperty(Config, "isBitball", {
                 get: function () {
-                    return window.location.hostname == 'bitball.io';
+                    return window.location.hostname == 'bitball.io' || window.location.hostname == 'sergeydevjatov.github.io';
                 },
                 enumerable: true,
                 configurable: true
