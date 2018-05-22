@@ -1,0 +1,29 @@
+﻿{
+  "ru_RU": {
+    "common_type": "Тип",
+    "common_close": "Закрыть",
+    "common_save": "Сохранить",
+    "common_add": "Добавить",
+    "common_cancel": "Отменить",
+    "common_done": "Готово",
+    "common_show": "Отображать",
+    "common_yes": "Да",
+    "common_no": "Нет",
+    "common_team": "Команда",
+    "common_players": "Игроки"
+  },
+
+  "en_US": {
+    "common_type": "Тип",
+    "common_close": "Закрыть",
+    "common_save": "Сохранить",
+    "common_add": "Добавить",
+    "common_cancel": "Отменить",
+    "common_done": "Готово",
+    "common_show": "Отображать",
+    "common_yes": "Да",
+    "common_no": "Нет",
+    "common_team": "Команда",
+    "common_players": "Игроки"
+  }
+}

@@ -1,0 +1,11 @@
+﻿common_type = Type
+common_close = Close
+common_save = Save
+common_add = Add
+common_cancel = Cancel
+common_done = Done
+common_show = Show
+common_yes = Yes
+common_no = No
+common_team = Team
+common_players = Players
